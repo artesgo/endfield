@@ -1,0 +1,43 @@
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.center {
+  display: flex;
+}
+
+.right,
+.left {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+}
+
+.left-1 {
+  background-color: blueviolet;
+  border: none;
+  clip-path: shape(
+    from 20% 0%,
+    line to 100% 0%,
+    curve to 80% 100% with 100% 0px / 80% 30px,
+    line to 0% 100%,
+    curve to 20% 0% with 0% 60px / 10% 0px
+  );
+}
+
+.left button {
+  height: 60px;
+}
+
+.right button {
+  height: 40px;
+}
+
+.right div {
+  display: flex;
+}

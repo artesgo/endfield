@@ -1,0 +1,41 @@
+@if (showMenu()) {
+  <div class="page">
+    <div class="top">
+      <button (click)="showMenu.set(false)">close</button>
+    </div>
+    <div class="center">
+      <div class="left">
+        <button class="left-1">Operator</button>
+        <button class="left-2">Events</button>
+        <button class="left-3">Headhunt</button>
+        <button class="left-4">Acquisition</button>
+      </div>
+
+      <ef-map></ef-map>
+
+      <div class="right">
+        <div class="right-1">
+          <button>Operational Manual</button>
+          <button>Protocol Pass</button>
+        </div>
+        <div class="right-2">
+          <button (click)="showMenu.set(false); navigate('/ui/essence')">Essence</button>
+          <button>Protocol Pass</button>
+        </div>
+        <div class="right-3">
+          <button>Operational Manual</button>
+          <button>Protocol Pass</button>
+        </div>
+        <div class="right-4">
+          <button>Operational Manual</button>
+          <button>Protocol Pass</button>
+        </div>
+        <div class="right-5">
+          <button>Operational Manual</button>
+          <button>Protocol Pass</button>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">something</div>
+  </div>
+}

@@ -1,0 +1,61 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex ul {
+  list-style: none;
+}
+
+.secondaries {
+  margin: 0.1rem 0.2rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.selected {
+  background: #ccc;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+label {
+  margin-right: 1rem;
+  margin-left: 0.4rem;
+}
+
+.name {
+  font-weight: bold;
+  width: 180px;
+  text-align: right;
+}
+
+td {
+  font-size: 0.8rem;
+  background: #eee;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+
+td button {
+  width: 2rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.add {
+  background: #cfc;
+}
+
+.sub {
+  background: rgb(243, 106, 106);
+}
+
+table {
+  width: 600px;
+  margin-left: 200px;
+}
+
+td .secondary {
+  width: 120px;
+}
