@@ -1,4 +1,4 @@
-import { Component, computed, effect, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IPrimary, ISecondary } from './essence-model';
@@ -58,11 +58,6 @@ export class Essence {
         weapons: mapWeapons,
       };
     });
-  });
-
-  fiveStarEffect = effect(() => {
-    const hideFives = this.hideFives();
-    console.log(hideFives ? 'Hiding 5 star weapons' : 'Showing 5 star weapons');
   });
 
   /**

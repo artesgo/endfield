@@ -1,3 +1,8 @@
+.page {
+  width: 900px;
+  margin: 0 auto;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +58,7 @@ td button {
 
 table {
   width: 600px;
-  margin-left: 200px;
+  margin: 0 auto;
 }
 
 td .secondary {

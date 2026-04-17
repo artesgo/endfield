@@ -1,27 +1,11 @@
 <div class="page">
-  <div class="top">
-    <button (click)="navigate('/ui')">close</button>
-  </div>
-
   <div class="flex">
     <h1>Essence Farm Solver</h1>
     @let hideFive = hideFives();
     <button (click)="hideFives.set(!hideFive)">{{ hideFive ? 'Hide 5*' : 'Show 5*' }}</button>
   </div>
 
-  <!-- <h2>Primary Locks</h2>
-  @for (primary of primaries(); track primary) {
-    <input
-      [id]="primary"
-      type="checkbox"
-      [disabled]="atLimit() && !selected(primary)"
-      (click)="togglePrimary(primary)"
-    />
-    <label [for]="primary">{{ primary }}</label>
-  } -->
-
   <h2>Secondary Locks</h2>
-
   <div class="flex">
     @for (secondary of secondaries(); track secondary) {
       <button
@@ -38,42 +22,40 @@
     </button>
   </div>
 
-  <div>
-    @for (map of weaponMap(); track map.name) {
-      @if (map.weapons.length > 0) {
-        <table class="map">
-          <caption>
-            {{
-              map.name
-            }}
-          </caption>
-          <thead>
+  @for (map of weaponMap(); track map.name) {
+    @if (map.weapons.length > 0) {
+      <table class="map">
+        <caption>
+          {{
+            map.name
+          }}
+        </caption>
+        <thead>
+          <tr>
+            <th>Weapon</th>
+            <th>Primary</th>
+            <th>Secondary</th>
+            <th>Skill</th>
+            <th>Owned</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (weapon of map.weapons; track weapon.name) {
             <tr>
-              <th>Weapon</th>
-              <th>Primary</th>
-              <th>Secondary</th>
-              <th>Skill</th>
-              <th>Owned</th>
+              <td class="name">{{ weapon.name }}</td>
+              <td class="primary">{{ weapon.primary }}</td>
+              <td class="secondary">{{ weapon.secondary }}</td>
+              <td class="skill">{{ weapon.skill }}</td>
+              <td class="action">
+                @let stored = storageCount(weapon.name);
+                <button class="add" (click)="add(weapon.name)">+</button>
+                ({{ stored }})
+                <button [class.sub]="stored > 0" (click)="subtract(weapon.name)">-</button>
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            @for (weapon of map.weapons; track weapon.name) {
-              <tr>
-                <td class="name">{{ weapon.name }}</td>
-                <td class="primary">{{ weapon.primary }}</td>
-                <td class="secondary">{{ weapon.secondary }}</td>
-                <td class="skill">{{ weapon.skill }}</td>
-                <td class="action">
-                  @let stored = storageCount(weapon.name);
-                  <button class="add" (click)="add(weapon.name)">+</button>
-                  ({{ stored }})
-                  <button [class.sub]="stored > 0" (click)="subtract(weapon.name)">-</button>
-                </td>
-              </tr>
-            }
-          </tbody>
-        </table>
-      }
+          }
+        </tbody>
+      </table>
     }
-  </div>
+  }
 </div>
