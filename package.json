@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "nx",
     "start": "nx serve --project=shop",
-    "build": "nx build",
+    "build": "nx build --project=shop",
     "test": "nx run-many --target=test --all",
     "lint": "nx lint",
     "e2e": "nx e2e"
