@@ -224,6 +224,13 @@ export const weapons: IWeapon[] = [
     skill: 'infliction',
   },
   {
+    name: 'Flickers in the Mist',
+    star: 6,
+    primary: 'will',
+    secondary: 'electric dmg boost',
+    skill: 'efficacy',
+  },
+  {
     name: 'Sundering Steel',
     star: 5,
     primary: 'agi',

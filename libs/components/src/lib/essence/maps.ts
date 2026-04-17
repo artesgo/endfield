@@ -103,4 +103,21 @@ export const essenceMaps: { name: string; map: IMap }[] = [
       skills: ['suppression', 'crusher', 'inspiring', 'combative', 'medicant', 'fracture', 'detonate', 'twilight'],
     },
   },
+  {
+    name: 'Marker Stone',
+    map: {
+      primaries: ['agi', 'str', 'int', 'will', 'main'],
+      secondaries: [
+        'attack boost',
+        'physical dmg boost',
+        'heat dmg boost',
+        'electric dmg boost',
+        'nature dmg boost',
+        'critical rate boost',
+        'ultimate gain boost',
+        'arts dmg boost',
+      ],
+      skills: ['assault', 'pursuit', 'inspiring', 'brutality', 'infliction', 'twilight', 'flow', 'efficacy'],
+    },
+  },
 ];
