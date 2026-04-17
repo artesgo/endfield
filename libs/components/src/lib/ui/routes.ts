@@ -5,7 +5,7 @@ import { Ui } from './ui';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'ui',
+    redirectTo: 'essence',
     pathMatch: 'full',
   },
   {
