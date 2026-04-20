@@ -1,6 +1,11 @@
 .page {
-  width: 900px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 20px;
+  background-image: radial-gradient(black 0.1px, transparent 1px);
+  background-size: 10px 10px;
+  background-repeat: repeat;
+  min-height: 100dvh;
 }
 
 .flex {
@@ -8,11 +13,16 @@
   flex-wrap: wrap;
 }
 
+.header {
+  align-items: center;
+  justify-content: space-between;
+}
+
 .flex ul {
   list-style: none;
 }
 
-.secondaries {
+.locks {
   margin: 0.1rem 0.2rem;
   padding: 0.2rem 0.4rem;
 }
@@ -36,7 +46,7 @@ label {
 
 td {
   font-size: 0.8rem;
-  background: #eee;
+  background: #444;
   border: 1px solid #aaa;
   border-radius: 4px;
   padding: 0.1rem 0.4rem;
@@ -57,10 +67,25 @@ td button {
 }
 
 table {
-  width: 600px;
+  width: 700px;
   margin: 0 auto;
 }
 
-td .secondary {
-  width: 120px;
+.star {
+  width: 40px;
+}
+.name {
+  width: 160px;
+}
+.primary {
+  width: 40px;
+}
+.secondary {
+  width: 160px;
+}
+.skill {
+  width: 80px;
+}
+.action {
+  width: 100px;
 }

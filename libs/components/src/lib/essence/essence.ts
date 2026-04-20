@@ -1,7 +1,7 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { IPrimary, ISecondary } from './essence-model';
+import { IPrimary, ISecondary, ISkill } from './essence-model';
 import { essenceMaps } from './maps';
 import { weapons } from './weapons';
 
@@ -31,26 +31,39 @@ export class Essence {
     'arts dmg boost',
     'treatment efficiency boost',
   ]);
+  skills = signal<ISkill[]>([
+    'assault',
+    'suppression',
+    'pursuit',
+    'crusher',
+    'inspiring',
+    'combative',
+    'brutality',
+    'infliction',
+    'medicant',
+    'fracture',
+    'detonate',
+    'twilight',
+    'flow',
+    'efficacy',
+  ]);
   hideFives = signal(false);
   selectedPrimaries = signal<IPrimary[]>([]);
   selectedSecondary = signal<ISecondary | null>(null);
-  setSecondary = (secondary: ISecondary) => {
-    this.selectedSecondary.set(secondary);
-  };
-  clearSecondary = () => {
-    this.selectedSecondary.set(null);
-  };
+  selectedSkill = signal<ISkill | null>(null);
   atLimit = computed(() => this.selectedPrimaries().length >= 3);
 
   weaponMap = computed(() => {
     const maps = this.maps();
     const weapons = this.weapons();
     const selectedSecondary = this.selectedSecondary();
+    const selectedSkill = this.selectedSkill();
     return maps.map((map) => {
       const mapWeapons = weapons
         .filter((weapon) => map.map.secondaries.includes(weapon.secondary))
         .filter((weapon) => map.map.skills.includes(weapon.skill))
         .filter((weapon) => !selectedSecondary || weapon.secondary === selectedSecondary)
+        .filter((weapon) => !selectedSkill || weapon.skill === selectedSkill)
         .filter((weapon) => !this.hideFives() || weapon.star !== 5);
 
       return {
@@ -59,28 +72,6 @@ export class Essence {
       };
     });
   });
-
-  /**
-   * Toggles the selection of a primary
-   * @param primary
-   */
-  togglePrimary(primary: IPrimary) {
-    const selected = this.selectedPrimaries();
-    if (!selected.includes(primary)) {
-      this.selectedPrimaries.set([...selected, primary]);
-    } else {
-      this.selectedPrimaries.set(selected.filter((p) => p !== primary));
-    }
-  }
-
-  /**
-   * Checks if a primary is selected
-   * @param primary
-   * @returns boolean
-   */
-  selected(primary: IPrimary) {
-    return this.selectedPrimaries().includes(primary);
-  }
 
   navigate(path: string) {
     this.router.navigate([path]);

@@ -1,6 +1,10 @@
 <div class="page">
-  <div class="flex">
+  <div class="flex header">
     <h1>Essence Farm Solver</h1>
+    <div>
+      buy me a
+      <a href="https://www.ko-fi.com/artesra" target="_blank">coffee</a>
+    </div>
     <!-- @let hideFive = hideFives(); -->
     <!-- <button (click)="hideFives.set(!hideFive)">{{ hideFive ? 'Hiding 5*' : 'Showing 5*' }}</button> -->
   </div>
@@ -9,15 +13,32 @@
   <div class="flex">
     @for (secondary of secondaries(); track secondary) {
       <button
-        class="secondaries"
+        class="locks"
         [class.selected]="selectedSecondary() === secondary"
         [id]="secondary"
-        (click)="setSecondary(secondary)"
+        (click)="selectedSecondary.set(secondary)"
       >
         {{ secondary }}
       </button>
     }
-    <button class="secondaries" [class.selected]="!selectedSecondary()" [id]="'none'" (click)="clearSecondary()">
+    <button class="locks" [class.selected]="!selectedSecondary()" [id]="'none'" (click)="selectedSecondary.set(null)">
+      None
+    </button>
+  </div>
+
+  <h2>Skill Locks</h2>
+  <div class="flex">
+    @for (skill of skills(); track skill) {
+      <button
+        class="locks"
+        [class.selected]="selectedSkill() === skill"
+        [id]="skill"
+        (click)="selectedSkill.set(skill)"
+      >
+        {{ skill }}
+      </button>
+    }
+    <button class="locks" [class.selected]="!selectedSkill()" [id]="'no-skill'" (click)="selectedSkill.set(null)">
       None
     </button>
   </div>
@@ -32,6 +53,7 @@
         </caption>
         <thead>
           <tr>
+            <th>Stars</th>
             <th>Weapon</th>
             <th>Primary</th>
             <th>Secondary</th>
@@ -42,6 +64,7 @@
         <tbody>
           @for (weapon of map.weapons; track weapon.name) {
             <tr>
+              <td class="star">{{ weapon.star }}</td>
               <td class="name">{{ weapon.name }}</td>
               <td class="primary">{{ weapon.primary }}</td>
               <td class="secondary">{{ weapon.secondary }}</td>
