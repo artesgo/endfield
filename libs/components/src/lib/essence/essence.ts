@@ -1,4 +1,4 @@
-import { NgOptimizedImage, provideImgixLoader } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,7 +11,6 @@ import { weapons } from './weapons';
   imports: [FormsModule, NgOptimizedImage],
   templateUrl: './essence.html',
   styleUrl: './essence.css',
-  providers: [provideImgixLoader('https://endfield-ruby.vercel.app/')],
 })
 export class Essence {
   private router = inject(Router);

@@ -4,15 +4,21 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/shop/src",
-  "tags": ["scope:shop"],
+  "tags": [
+    "scope:shop"
+  ],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/shop",
         "browser": "apps/shop/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/shop/tsconfig.app.json",
         "assets": [
           {
@@ -20,7 +26,9 @@
             "input": "apps/shop/public"
           }
         ],
-        "styles": ["apps/shop/src/styles.css"],
+        "styles": [
+          "apps/shop/src/styles.css"
+        ],
         "server": "apps/shop/src/main.server.ts",
         "ssr": {
           "entry": "apps/shop/src/server.ts"
@@ -46,13 +54,21 @@
         "development": {
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "fileReplacements": [
+            {
+              "replace": "apps/shop/src/environments/environment.ts",
+              "with": "apps/shop/src/environments/environment.development.ts"
+            }
+          ]
         }
       },
       "defaultConfiguration": "production"
     },
     "serve": {
-      "dependsOn": ["api:serve"],
+      "dependsOn": [
+        "api:serve"
+      ],
       "continuous": true,
       "executor": "@angular/build:dev-server",
       "configurations": {
