@@ -1,8 +1,9 @@
 import { IMap } from './essence-model';
 
-export const essenceMaps: { name: string; map: IMap }[] = [
+export const essenceMaps: { name: string; img: string; map: IMap }[] = [
   {
     name: 'The Hub',
+    img: 's_hub.jpg',
     map: {
       primaries: ['agi', 'str', 'int', 'will', 'main'],
       secondaries: [
@@ -20,6 +21,7 @@ export const essenceMaps: { name: string; map: IMap }[] = [
   },
   {
     name: 'Originium Science Park',
+    img: 's_science-park.jpg',
     map: {
       primaries: ['agi', 'str', 'int', 'will', 'main'],
       secondaries: [
@@ -37,6 +39,7 @@ export const essenceMaps: { name: string; map: IMap }[] = [
   },
   {
     name: 'Origin Lodespring',
+    img: 's_lodespring.jpg',
     map: {
       primaries: ['agi', 'str', 'int', 'will', 'main'],
       secondaries: [
@@ -54,6 +57,7 @@ export const essenceMaps: { name: string; map: IMap }[] = [
   },
   {
     name: 'Power Plateau',
+    img: 's_power-plateau.jpg',
     map: {
       primaries: ['agi', 'str', 'int', 'will', 'main'],
       secondaries: [
@@ -70,7 +74,8 @@ export const essenceMaps: { name: string; map: IMap }[] = [
     },
   },
   {
-    name: 'Wuling City',
+    name: 'Monitoring Station',
+    img: 's_monitoring-station.jpg',
     map: {
       primaries: ['agi', 'str', 'int', 'will', 'main'],
       secondaries: [
@@ -88,6 +93,7 @@ export const essenceMaps: { name: string; map: IMap }[] = [
   },
   {
     name: 'Qingbo Stockade',
+    img: 's_qingbo.jpg',
     map: {
       primaries: ['agi', 'str', 'int', 'will', 'main'],
       secondaries: [
@@ -105,6 +111,7 @@ export const essenceMaps: { name: string; map: IMap }[] = [
   },
   {
     name: 'Marker Stone',
+    img: 's_marker-stone.jpg',
     map: {
       primaries: ['agi', 'str', 'int', 'will', 'main'],
       secondaries: [

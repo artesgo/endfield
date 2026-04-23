@@ -6,6 +6,7 @@
   background-size: 10px 10px;
   background-repeat: repeat;
   min-height: 100dvh;
+  overflow: hidden;
 }
 
 .flex {
@@ -71,6 +72,11 @@ table {
   margin: 0 auto;
 }
 
+caption {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .star {
   width: 40px;
 }
@@ -88,4 +94,18 @@ table {
 }
 .action {
   width: 100px;
+}
+
+.map {
+  position: relative;
+  min-height: 200px;
+  margin-bottom: 1rem;
+}
+
+.map img {
+  position: absolute;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, white 0%, transparent 50%);
+  opacity: 0.25;
+  pointer-events: none;
 }

@@ -45,40 +45,43 @@
 
   @for (map of weaponMap(); track map.name) {
     @if (map.weapons.length > 0) {
-      <table class="map">
-        <caption>
-          {{
-            map.name
-          }}
-        </caption>
-        <thead>
-          <tr>
-            <th>Stars</th>
-            <th>Weapon</th>
-            <th>Primary</th>
-            <th>Secondary</th>
-            <th>Skill</th>
-            <th>Owned</th>
-          </tr>
-        </thead>
-        <tbody>
-          @for (weapon of map.weapons; track weapon.name) {
+      <div class="map">
+        <img [ngSrc]="map.img" [height]="1080" [width]="1920" [alt]="map.name" />
+        <table>
+          <caption>
+            {{
+              map.name
+            }}
+          </caption>
+          <thead>
             <tr>
-              <td class="star">{{ weapon.star }}</td>
-              <td class="name">{{ weapon.name }}</td>
-              <td class="primary">{{ weapon.primary }}</td>
-              <td class="secondary">{{ weapon.secondary }}</td>
-              <td class="skill">{{ weapon.skill }}</td>
-              <td class="action">
-                @let stored = storageCount(weapon.name);
-                <button class="add" (click)="add(weapon.name)">+</button>
-                ({{ stored }})
-                <button [class.sub]="stored > 0" (click)="subtract(weapon.name)">-</button>
-              </td>
+              <th>Stars</th>
+              <th>Weapon</th>
+              <th>Primary</th>
+              <th>Secondary</th>
+              <th>Skill</th>
+              <th>Owned</th>
             </tr>
-          }
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            @for (weapon of map.weapons; track weapon.name) {
+              <tr>
+                <td class="star">{{ weapon.star }}</td>
+                <td class="name">{{ weapon.name }}</td>
+                <td class="primary">{{ weapon.primary }}</td>
+                <td class="secondary">{{ weapon.secondary }}</td>
+                <td class="skill">{{ weapon.skill }}</td>
+                <td class="action">
+                  @let stored = storageCount(weapon.name);
+                  <button class="add" (click)="add(weapon.name)">+</button>
+                  ({{ stored }})
+                  <button [class.sub]="stored > 0" (click)="subtract(weapon.name)">-</button>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
     }
   }
 </div>
