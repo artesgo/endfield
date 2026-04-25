@@ -79,18 +79,31 @@ export class Essence {
   }
 
   add(name: string) {
-    const count = localStorage.getItem(name);
-    localStorage.setItem(name, count ? (Number.parseInt(count) + 1).toString() : '1');
+    try {
+      const count = localStorage.getItem(name);
+      localStorage.setItem(name, count ? (Number.parseInt(count) + 1).toString() : '1');
+    } catch (e) {
+      console.error('Failed to access localStorage');
+    }
   }
 
   subtract(name: string) {
-    const count = localStorage.getItem(name);
-    if (count && Number.parseInt(count) > 0) {
-      localStorage.setItem(name, (Number.parseInt(count) - 1).toString());
+    try {
+      const count = localStorage.getItem(name);
+      if (count && Number.parseInt(count) > 0) {
+        localStorage.setItem(name, (Number.parseInt(count) - 1).toString());
+      }
+    } catch (e) {
+      console.error('Failed to access localStorage');
     }
   }
 
   storageCount(name: string) {
-    return Number.parseInt(localStorage.getItem(name) ?? '0');
+    try {
+      return Number.parseInt(localStorage.getItem(name) ?? '0');
+    } catch (e) {
+      console.error('Failed to access localStorage');
+      return 0;
+    }
   }
 }
