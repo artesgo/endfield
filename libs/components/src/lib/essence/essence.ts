@@ -83,7 +83,7 @@ export class Essence {
       const count = localStorage.getItem(name);
       localStorage.setItem(name, count ? (Number.parseInt(count) + 1).toString() : '1');
     } catch (e) {
-      console.error('Failed to access localStorage');
+      this.noop(e);
     }
   }
 
@@ -94,7 +94,7 @@ export class Essence {
         localStorage.setItem(name, (Number.parseInt(count) - 1).toString());
       }
     } catch (e) {
-      console.error('Failed to access localStorage');
+      this.noop(e);
     }
   }
 
@@ -102,8 +102,12 @@ export class Essence {
     try {
       return Number.parseInt(localStorage.getItem(name) ?? '0');
     } catch (e) {
-      console.error('Failed to access localStorage');
+      this.noop(e);
       return 0;
     }
+  }
+
+  noop(event: unknown) {
+    return event;
   }
 }
