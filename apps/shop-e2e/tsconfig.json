@@ -6,6 +6,7 @@
     "sourceMap": false,
     "module": "commonjs",
     "strict": true,
+    "ignoreDeprecations": "6.0",
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
