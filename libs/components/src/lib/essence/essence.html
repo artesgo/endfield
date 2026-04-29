@@ -46,9 +46,9 @@
   @for (map of weaponMap(); track map.name) {
     @if (map.weapons.length > 0) {
       <div class="map">
-        <img [ngSrc]="map.img" [height]="540" [width]="960" [alt]="map.name" />
         <table>
           <caption>
+            <img [ngSrc]="map.img" [height]="540" [width]="960" [alt]="map.name" />
             {{
               map.name
             }}

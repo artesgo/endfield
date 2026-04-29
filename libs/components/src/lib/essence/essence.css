@@ -1,7 +1,6 @@
 .page {
   max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
   background-image: radial-gradient(black 0.1px, transparent 1px);
   background-size: 10px 10px;
   background-repeat: repeat;
@@ -50,43 +49,12 @@ label {
   text-align: right;
 }
 
-td {
-  font-size: 0.8rem;
-  background: #444;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 0.1rem 0.4rem;
-}
-
-td button {
-  width: 2rem;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-}
-
 .add {
   background: #cfc;
 }
 
 .sub {
   background: rgb(243, 106, 106);
-}
-
-table {
-  width: 700px;
-  margin: 10px auto;
-}
-
-caption {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-td {
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.2);
 }
 
 .star {
@@ -109,15 +77,49 @@ td {
 }
 
 .map {
-  position: relative;
-  min-height: 200px;
-  margin-bottom: 1rem;
+  overflow-x: scroll;
+  display: flex;
+  justify-content: center;
 }
 
-.map img {
+.map table {
+  width: 700px;
+  min-width: 600px;
+  margin: 0 1rem;
+}
+
+.map caption {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.map caption img {
   position: absolute;
   overflow: hidden;
+  left: 0;
   mask-image: linear-gradient(to bottom, white 0%, transparent 50%);
   opacity: 0.5;
   pointer-events: none;
+}
+
+.map td {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.8rem;
+  background: #444;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  white-space: nowrap;
+}
+
+.map td button {
+  width: 2rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
 }
