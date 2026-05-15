@@ -127,4 +127,22 @@ export const essenceMaps: { name: string; img: string; map: IMap }[] = [
       skills: ['assault', 'pursuit', 'inspiring', 'brutality', 'infliction', 'twilight', 'flow', 'efficacy'],
     },
   },
+  {
+    name: 'Wuling Test Area',
+    img: 's_wuling-test-area.jpg',
+    map: {
+      primaries: ['agi', 'str', 'int', 'will', 'main'],
+      secondaries: [
+        'hp boost',
+        'heat dmg boost',
+        'electric dmg boost',
+        'cryo dmg boost',
+        'nature dmg boost',
+        'arts intensity boost',
+        'ultimate gain boost',
+        'treatment efficiency boost',
+      ],
+      skills: ['suppression', 'crusher', 'combative', 'brutality', 'infliction', 'fracture', 'twilight', 'flow'],
+    },
+  },
 ];
