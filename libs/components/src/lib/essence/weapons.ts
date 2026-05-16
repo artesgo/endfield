@@ -31,7 +31,7 @@ export const weapons: IWeapon[] = [
     name: 'Clannibal',
     star: 6,
     primary: 'main',
-    secondary: 'arts intensity boost',
+    secondary: 'arts dmg boost',
     skill: 'infliction',
   },
   {
