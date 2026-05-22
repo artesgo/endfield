@@ -78,6 +78,7 @@ label {
 
 .map {
   overflow-x: scroll;
+  overflow-y: hidden;
   display: flex;
   justify-content: center;
 }

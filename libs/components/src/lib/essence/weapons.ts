@@ -231,6 +231,20 @@ export const weapons: IWeapon[] = [
     skill: 'efficacy',
   },
   {
+    name: 'Amaranthine Tassel',
+    star: 6,
+    primary: 'str',
+    secondary: 'attack boost',
+    skill: 'combative',
+  },
+  {
+    name: 'Blessing of Lustrous Carmine',
+    star: 6,
+    primary: 'agi',
+    secondary: 'heat dmg boost',
+    skill: 'flow',
+  },
+  {
     name: 'Sundering Steel',
     star: 5,
     primary: 'agi',
