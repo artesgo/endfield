@@ -245,6 +245,20 @@ export const weapons: IWeapon[] = [
     skill: 'flow',
   },
   {
+    name: 'Phantom Pain',
+    star: 6,
+    primary: 'str',
+    secondary: 'arts intensity boost',
+    skill: 'suppression',
+  },
+  {
+    name: 'Beacon of Duty',
+    star: 6,
+    primary: 'agi',
+    secondary: 'ultimate gain boost',
+    skill: 'efficacy',
+  },
+  {
     name: 'Sundering Steel',
     star: 5,
     primary: 'agi',
