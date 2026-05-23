@@ -53,6 +53,7 @@ export class Essence {
   selectedSecondary = signal<ISecondary | null>(null);
   selectedSkill = signal<ISkill | null>(null);
   atLimit = computed(() => this.selectedPrimaries().length >= 3);
+  searchTerm = signal('');
 
   weaponMap = computed(() => {
     const maps = this.maps();
@@ -65,7 +66,8 @@ export class Essence {
         .filter((weapon) => map.map.skills.includes(weapon.skill))
         .filter((weapon) => !selectedSecondary || weapon.secondary === selectedSecondary)
         .filter((weapon) => !selectedSkill || weapon.skill === selectedSkill)
-        .filter((weapon) => !this.hideFives() || weapon.star !== 5);
+        .filter((weapon) => !this.hideFives() || weapon.star !== 5)
+        .filter((weapon) => !this.searchTerm() || weapon.name.toLowerCase().includes(this.searchTerm().toLowerCase()));
 
       return {
         ...map,

@@ -9,6 +9,15 @@
     <!-- <button (click)="hideFives.set(!hideFive)">{{ hideFive ? 'Hiding 5*' : 'Showing 5*' }}</button> -->
   </div>
 
+  <div class="search">
+    <input
+      type="text"
+      placeholder="Search weapons..."
+      [value]="searchTerm()"
+      (input)="searchTerm.set($event.target.value)"
+    />
+  </div>
+
   <h2>Secondary Locks</h2>
   <div class="flex">
     @for (secondary of secondaries(); track secondary) {
