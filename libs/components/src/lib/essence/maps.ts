@@ -145,4 +145,22 @@ export const essenceMaps: { name: string; img: string; map: IMap }[] = [
       skills: ['suppression', 'crusher', 'combative', 'brutality', 'infliction', 'fracture', 'twilight', 'flow'],
     },
   },
+  {
+    name: 'Wuling-Sword Vault Dale',
+    img: 's_sword-vault.jpg',
+    map: {
+      primaries: ['agi', 'str', 'int', 'will', 'main'],
+      secondaries: [
+        'attack boost',
+        'hp boost',
+        'physical dmg boost',
+        'heat dmg boost',
+        'cryo dmg boost',
+        'nature dmg boost',
+        'arts intensity boost',
+        'treatment efficiency boost',
+      ],
+      skills: ['assault', 'pursuit', 'inspiring', 'combative', 'medicant', 'fracture', 'detonate', 'efficacy'],
+    },
+  },
 ];
