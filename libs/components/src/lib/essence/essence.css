@@ -81,6 +81,18 @@ label {
   overflow-y: hidden;
   display: flex;
   justify-content: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.map caption {
+  pointer-events: none;
+  height: 120px;
+  overflow: hidden;
+}
+
+.map::-webkit-scrollbar {
+  display: none;
 }
 
 .map table {
@@ -97,15 +109,6 @@ label {
   margin-bottom: 0.5rem;
   margin-left: -1rem;
   margin-right: -1rem;
-}
-
-.map caption img {
-  position: absolute;
-  overflow: hidden;
-  left: 0;
-  mask-image: linear-gradient(to bottom, white 0%, transparent 50%);
-  opacity: 0.5;
-  pointer-events: none;
 }
 
 .map td {
