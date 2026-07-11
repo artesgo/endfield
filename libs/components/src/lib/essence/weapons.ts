@@ -259,6 +259,20 @@ export const weapons: IWeapon[] = [
     skill: 'efficacy',
   },
   {
+    name: 'Type 42: Solemn Phalanx',
+    star: 6,
+    primary: 'int',
+    secondary: 'ultimate gain boost',
+    skill: 'detonate',
+  },
+  {
+    name: 'Bedazzling Night Debut',
+    star: 6,
+    primary: 'will',
+    secondary: 'treatment efficiency boost',
+    skill: 'medicant',
+  },
+  {
     name: 'Sundering Steel',
     star: 5,
     primary: 'agi',
