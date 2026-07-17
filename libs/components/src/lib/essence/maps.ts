@@ -163,4 +163,22 @@ export const essenceMaps: { name: string; img: string; map: IMap }[] = [
       skills: ['assault', 'pursuit', 'inspiring', 'combative', 'medicant', 'fracture', 'detonate', 'efficacy'],
     },
   },
+  {
+    name: 'Ying Lung Pass',
+    img: 's_sword-vault.jpg',
+    map: {
+      primaries: ['agi', 'str', 'int', 'will', 'main'],
+      secondaries: [
+        'attack boost',
+        'physical dmg boost',
+        'electric dmg boost',
+        'cryo dmg boost',
+        'nature dmg boost',
+        'critical rate boost',
+        'arts intensity boost',
+        'arts dmg boost',
+      ],
+      skills: ['suppression', 'pursuit', 'combative', 'brutality', 'infliction', 'detonate', 'flow', 'efficacy'],
+    },
+  },
 ];
