@@ -181,4 +181,31 @@ export const essenceMaps: { name: string; img: string; map: IMap }[] = [
       skills: ['suppression', 'pursuit', 'combative', 'brutality', 'infliction', 'detonate', 'flow', 'efficacy'],
     },
   },
+  {
+    name: 'North Wuling EZ',
+    img: 's_sword-vault.jpg',
+    map: {
+      primaries: ['agi', 'str', 'int', 'will', 'main'],
+      secondaries: [
+        'hp boost',
+        'physical dmg boost',
+        'heat dmg boost',
+        'nature dmg boost',
+        'critical rate boost',
+        'arts intensity boost',
+        'arts dmg boost',
+        'treatment efficiency boost',
+      ],
+      skills: [
+        'assault',
+        'suppression',
+        'pursuit',
+        'crusher',
+        'inspiring',
+        'infliction',
+        'medicant',
+        'efficacy'
+      ],
+    },
+  },
 ];
